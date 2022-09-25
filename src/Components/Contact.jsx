@@ -59,8 +59,8 @@ export const Contact = () => {
           required
           autoComplete="off"
           className="bg-transparent select-none border-b text-xl
-                    border-b-gray-200 border-x-0 border-t-0 ml-4 mb-2 text-red-600
-                    focus:outline-none md:h-16 md:w-52 lg:h-20 lg:w-96 lg:text-5xl"
+                    border-b-gray-200 border-x-0 border-t-0 ml-4 mb-2 text-red-600 w-36
+                    focus:outline-none md:h-16 md:w-52 lg:h-20 lg:w-96 lg:text-5xl xl:w-[40vw]"
         />
         <br />
         <motion.label
@@ -76,7 +76,7 @@ export const Contact = () => {
           id="email"
           name="email"
           autoComplete="off"
-          className="bg-transparent select-none border-b text-xl border-b-gray-200 border-x-0 border-t-0 ml-4 w-36 mb-2 text-red-600 lg:text-5xl md:h-16 md:w-52 lg:h-20 lg:w-96 "
+          className="bg-transparent select-none border-b text-xl border-b-gray-200 border-x-0 border-t-0 ml-4 w-36 mb-2 text-red-600 lg:text-5xl md:h-16 md:w-52 lg:h-20 lg:w-96 xl:w-[40vw]"
         />
         <br />
         <motion.label
@@ -91,7 +91,7 @@ export const Contact = () => {
           type="text"
           name="topic"
           autoComplete="off"
-          className="bg-transparent border-b border-b-gray-200 border-x-0 border-t-0 ml-4 w-36 mb-2 text-xl text-red-600 md:h-16text-red-600 lg:text-5xl md:w-52 lg:h-20 lg:w-96"
+          className="bg-transparent border-b border-b-gray-200 border-x-0 border-t-0 ml-4 w-36 mb-2 text-xl text-red-600 md:h-16text-red-600 lg:text-5xl md:w-52 lg:h-20 lg:w-96 xl:w-[40vw]"
         />
         <br />
         <motion.button
