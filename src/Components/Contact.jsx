@@ -23,7 +23,7 @@ export const Contact = () => {
     },
   };
   return (
-    <motion.div className="contact">
+    <motion.div className="contact my-52">
       <motion.h1
         variants={item}
         initial="hidden"
