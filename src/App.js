@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { Intro } from "./Components/Intro";
 import { About } from "./Components/About";
 import { Work } from "./Components/Work";
@@ -9,7 +9,6 @@ import { NavBar } from "./Components/NavBar";
 import HashLoader from "react-spinners/HashLoader";
 import "./style/style.css";
 
-
 function App() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -17,19 +16,19 @@ function App() {
     setIsLoading(true);
     setInterval(() => {
       setIsLoading(false);
-    }, 2000)
-  }, [])
+    }, 2000);
+  }, []);
 
   return (
-
-    <div >
-      {isLoading ?
+    <>
+      {isLoading ? (
         <motion.div
-          exit={{ x: '100%', transition: { duration: 1, stiffness: 100 } }}
-          className="flex justify-center items-center bg-black w-full h-screen">
+          exit={{ x: "100%", transition: { duration: 1, stiffness: 100 } }}
+          className="flex justify-center items-center bg-black w-full h-screen"
+        >
           <HashLoader color="orange" loading={isLoading} size={100} />
         </motion.div>
-        :
+      ) : (
         <div className="px-5 md:px-20 lg:px-28">
           <NavBar />
           <Intro />
@@ -37,12 +36,8 @@ function App() {
           <Work />
           <Contact />
         </div>
-
-      }
-
-    </div>
-
-
+      )}
+    </>
   );
 }
 
