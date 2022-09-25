@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
+  const form = useRef();
   const container = {
     show: {
       transition: {
@@ -22,6 +24,27 @@ export const Contact = () => {
       },
     },
   };
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_qqfs44f",
+        "template_ix6gzhd",
+        form.current,
+        "OBmNVASRiPeQyuCTx"
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          window.alert("Your Email Has Been Sent Successfully...");
+          e.target.reset();
+        },
+        (error) => {
+          // console.log(error.text);
+          window.alert("Something Went Wrong. Try Again");
+        }
+      );
+  };
   return (
     <motion.div className="contact my-52">
       <motion.h1
@@ -34,6 +57,8 @@ export const Contact = () => {
       </motion.h1>
       {/* form */}
       <motion.form
+        ref={form}
+        onSubmit={sendEmail}
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -56,7 +81,7 @@ export const Contact = () => {
         <motion.input
           variants={item}
           type="text"
-          name="name"
+          name="user_name"
           required
           autoComplete="off"
           className="bg-transparent select-none border-b text-xl
@@ -75,7 +100,7 @@ export const Contact = () => {
           variants={item}
           type="email"
           id="email"
-          name="email"
+          name="user_email"
           autoComplete="off"
           className="bg-transparent select-none border-b text-xl border-b-gray-200 border-x-0 border-t-0 ml-4 w-36 mb-2 text-red-600 lg:text-5xl md:h-16 md:w-52 lg:h-20 lg:w-96 xl:w-[40vw]"
         />
@@ -90,7 +115,7 @@ export const Contact = () => {
         <motion.input
           variants={item}
           type="text"
-          name="topic"
+          name="user_message"
           autoComplete="off"
           className="bg-transparent border-b border-b-gray-200 border-x-0 border-t-0 ml-4 w-36 mb-2 text-xl text-red-600 md:h-16text-red-600 lg:text-5xl md:w-52 lg:h-20 lg:w-96 xl:w-[40vw]"
         />
