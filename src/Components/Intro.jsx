@@ -4,17 +4,25 @@ import { motion } from "framer-motion";
 export const Intro = () => {
   const container = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.2 } },
+    show: { opacity: 1, transition: { staggerChildren: 0.3 } },
   };
   const item = {
     hidden: { opacity: 0, y: -10 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.2, ease: "easeIn" } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeIn",
+        viewport: { once: false, amount: 0.3 },
+      },
+    },
   };
   return (
     <motion.div
       variants={container}
       initial="hidden"
-      animate="show"
+      whileInView="show"
       className="font-major-mono font-medium text-white my-auto h-screen
                     space-y-2 flex justify-center flex-col relative md:space-y-3
                     "

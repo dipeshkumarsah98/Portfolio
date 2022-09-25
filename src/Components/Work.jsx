@@ -8,7 +8,15 @@ import SMS from "../img/student-management-system.png";
 export const Work = () => {
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeIn" } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeIn",
+        viewport: { once: false, amount: 0.5 },
+      },
+    },
   };
   var description =
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, veniam voluptate asperiores dolorum reprehenderit quaerat quod quae velit eius atque rerum debitis obcaecati corrupti necessitatibus sunt, earum sint possimus fuga voluptatibus officia iste reiciendis sed ratione. Enim cum at, ad, vero sequi veniam dolor eius, sed facilis neque molestias. Amet!";
@@ -69,7 +77,6 @@ export const Work = () => {
         variants={item}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.5 }}
         className="font-nunito text-center text-5xl font-bold text-pink-300/80 lg:text-8xl md:text-left lg:my-30"
       >
         Recent Work

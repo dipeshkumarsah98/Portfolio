@@ -17,8 +17,8 @@ export const Card = ({
       <motion.div
         variants={item}
         initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.5 }}
+        whileInView="show"
+        viewport={{ once: false, amount: 0.4 }}
         className="mt-20"
       >
         <Marquee
@@ -36,8 +36,8 @@ export const Card = ({
       <motion.div
         variants={item}
         initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.5 }}
+        whileInView="show"
+        viewport={{ once: false, amount: 0.4 }}
         className="text-white/80 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center"
       >
         <div className="lg:space-x-3">

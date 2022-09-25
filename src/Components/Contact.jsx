@@ -5,8 +5,9 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 export const Contact = () => {
   const container = {
     show: {
-      staggerChildren: 0.5,
-      viewport: { once: true, amount: 1 },
+      transition: {
+        staggerChildren: 0.2,
+      },
     },
   };
   const item = {
@@ -16,8 +17,8 @@ export const Contact = () => {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeIn",
-        viewport: { once: true, amount: 1 },
+        ease: "easeInOut",
+        viewport: { once: true, amount: 0.5 },
       },
     },
   };
@@ -105,10 +106,11 @@ export const Contact = () => {
           Send
         </motion.button>
       </motion.form>
+      {/* social media */}
       <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        variants={item}
+        initial="hidden"
+        whileInView="show"
         className="flex text-white/80 justify-end space-x-9 -mt-24 mb-10 font-nunito md:-mt-28 lg:-mt-32"
       >
         <div className="hover:text-pink-200 hover:line-through md:text-2xl lg:text-4xl">
