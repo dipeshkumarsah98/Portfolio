@@ -27,7 +27,7 @@ export const Contact = () => {
         variants={item}
         initial="hidden"
         whileInView="show"
-        className="font-nunito text-center text-5xl font-bold text-pink-300 lg:text-8xl md:text-left lg:my-30"
+        className="font-nunito text-center text-5xl font-bold text-pink-300/80 lg:text-8xl md:text-left lg:my-30"
       >
         Talk to Me
       </motion.h1>
@@ -36,7 +36,7 @@ export const Contact = () => {
         variants={container}
         initial="hidden"
         whileInView="show"
-        className="text-white font-raleway my-10"
+        className="text-white/80 font-raleway my-10"
       >
         <motion.p
           variants={item}
@@ -109,7 +109,7 @@ export const Contact = () => {
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="flex text-white justify-end space-x-9 -mt-24 mb-10 font-nunito md:-mt-28 lg:-mt-32"
+        className="flex text-white/80 justify-end space-x-9 -mt-24 mb-10 font-nunito md:-mt-28 lg:-mt-32"
       >
         <div className="hover:text-pink-200 hover:line-through md:text-2xl lg:text-4xl">
           STALK ME

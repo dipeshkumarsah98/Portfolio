@@ -21,14 +21,14 @@ export const About = () => {
   return (
     <div
       id="about"
-      className="text-white flex flex-col items-center my-10 tracking-widest lg:my-20"
+      className="text-white/80 flex flex-col items-center my-10 tracking-widest lg:my-20"
     >
       <motion.h1
         variants={item}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
-        className="font-nunito text-5xl font-bold text-pink-300 md:text-6xl lg:text-8xl lg:my-10"
+        className="font-nunito text-5xl font-bold text-pink-300/80 md:text-6xl lg:text-8xl lg:my-10"
       >
         WHO AM I?
       </motion.h1>
@@ -51,8 +51,8 @@ export const About = () => {
           className="text-justify text-md md:text-4xl lg:text-7xl"
         >
           I'm a Junior Full Stack Developer and currently persuing my Bachelor
-          in <span className="text-red-400 line-through"> BTECH</span> from ISMT
-          college at Tinkune Kathmandu, Nepal
+          in <span className="text-red-400/80 line-through"> BTECH</span> from
+          ISMT college at Tinkune Kathmandu, Nepal
         </motion.p>
 
         <motion.p
@@ -69,9 +69,10 @@ export const About = () => {
           className="text-justify text-md md:text-4xl lg:text-7xl"
         >
           I am currently{" "}
-          <span className="text-red-400 line-through">Redux</span> and jest to
-          further my back front-end focus. I'm learing{" "}
-          <span className="text-red-400 line-through">ML and AI </span>as well.
+          <span className="text-red-400/80 line-through">Redux</span> and jest
+          to further my back front-end focus. I'm learing{" "}
+          <span className="text-red-400/80 line-through">ML and AI </span>as
+          well.
         </motion.p>
 
         <motion.p
@@ -79,8 +80,9 @@ export const About = () => {
           className="text-justify text-md  md:text-4xl lg:text-7xl"
         >
           My aim is to take coding into the{" "}
-          <span className="text-red-400 line-through">fifth</span> professional
-          dimension where I hope to bring value and continously grow myself.
+          <span className="text-red-400/80 line-through">fifth</span>{" "}
+          professional dimension where I hope to bring value and continously
+          grow myself.
         </motion.p>
 
         <motion.p
@@ -88,9 +90,9 @@ export const About = () => {
           className="text-justify text-md  md:text-4xl lg:text-7xl"
         >
           When i'm not coding, you can either find me playing{" "}
-          <span className="text-red-400 line-through">Football</span> at the
+          <span className="text-red-400/80 line-through">Football</span> at the
           Work Cup park, or watching
-          <span className="text-red-400 line-through"> Movies</span>.
+          <span className="text-red-400/80 line-through"> Movies</span>.
         </motion.p>
       </motion.div>
     </div>

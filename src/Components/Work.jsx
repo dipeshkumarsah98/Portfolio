@@ -70,7 +70,7 @@ export const Work = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
-        className="font-nunito text-center text-5xl font-bold text-pink-300 lg:text-8xl md:text-left lg:my-30"
+        className="font-nunito text-center text-5xl font-bold text-pink-300/80 lg:text-8xl md:text-left lg:my-30"
       >
         Recent Work
       </motion.h1>

@@ -34,7 +34,7 @@ export const NavBar = () => {
         right: 200,
         bottom: 500,
       }}
-      className="text-pink-200 font-nunito fixed mt-20 font-bold text-xl z-10 md:text-3xl lg:text-4xl"
+      className="text-pink-200 font-nunito fixed mt-20 font-bold text-xl z-20 md:text-3xl lg:text-4xl"
     >
       <motion.div
         variants={item}

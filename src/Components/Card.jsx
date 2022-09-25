@@ -27,7 +27,7 @@ export const Card = ({
           play={true}
           gradient={false}
         >
-          <p className="text-white hover:text-orange-400 hover:italic hover:line-through">
+          <p className="text-white/80 hover:text-orange-400 hover:italic hover:line-through">
             {projectName}
           </p>
         </Marquee>
@@ -38,7 +38,7 @@ export const Card = ({
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.5 }}
-        className="text-white grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center"
+        className="text-white/80 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center"
       >
         <div className="lg:space-x-3">
           {/* project title */}
@@ -48,7 +48,7 @@ export const Card = ({
           </h1>
           {/* about project */}
 
-          <h2 className="font-merienda text-2xl my-3 text-pink-300 md:text-3xl lg:text-4xl">
+          <h2 className="font-merienda text-2xl my-3 text-pink-300/80 md:text-3xl lg:text-4xl">
             PROJECT CONCEPT
           </h2>
           <p className="font-merienda text-xl  text-justify md:text-3xl">
@@ -56,7 +56,7 @@ export const Card = ({
           </p>
           {/* Tech implemented */}
 
-          <h2 className="font-merienda text-2xl my-3 text-pink-300 md:text-3xl lg:text-4xl">
+          <h2 className="font-merienda text-2xl my-3 text-pink-300/80 md:text-3xl lg:text-4xl">
             TECH BEING IMPLEMENTED
           </h2>
           <ul className="list-disc grid grid-cols-2 px-5 lg:px-5 text-xl  md:text-3xl">
@@ -73,7 +73,7 @@ export const Card = ({
                 className="cursor-pointer "
                 fontSize={30}
               />
-              <div className="text-pink-200 text-lg cursor-pointer lg:text-xl hover:text-white transition-colors">
+              <div className="text-pink-200 text-lg cursor-pointer lg:text-xl hover:text-white/80 transition-colors">
                 VIEW REPO
               </div>
             </div>
